@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Text To Clipboard</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="text-boxes">
+
+        <!-- HTML Box -->
+        <div class="text-box HTMLBox">
+            <div class="topic">HTML Code:</div>
+
+            <textarea id="HTMLBox" readonly>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang=&quot;en&quot;&gt;
+
+                &lt;head&gt;
+                    &lt;meta charset=&quot;UTF-8&quot;&gt;
+                    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+                    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+                    &lt;title&gt;Copy Text To Clipboard&lt;/title&gt;
+                    &lt;link rel=&quot;stylesheet&quot; href=&quot;./style.css&quot;&gt;
+                &lt;/head&gt;
+
+                &lt;body&gt;
+                    &lt;div class=&quot;text-boxes&quot;&gt;
+
+                        &lt;!-- HTML Box --&gt;
+                        &lt;div class=&quot;text-box HTMLBox&quot;&gt;
+                            &lt;div class=&quot;topic&quot;&gt;HTML Code:&lt;/div&gt;
+
+                            &lt;textarea id=&quot;HTMLBox&quot; readonly&gt;
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga eius aperiam corrupti excepturi modi deserunt, nihil a tenetur odio, dignissimos minima reiciendis cum saepe et ea officia cupiditate tempore quasi?
+                            &lt;/textarea&gt;
+
+                            &lt;button id=&quot;HTMLBtn&quot;&gt;Copy Codes&lt;/button&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- CSS Box --&gt;
+                        &lt;div class=&quot;text-box CSSBox&quot;&gt;
+                            &lt;div class=&quot;topic&quot;&gt;CSS Code:&lt;/div&gt;
+
+                            &lt;textarea id=&quot;CSSBox&quot; readonly&gt;
+                                *{
+                                    margin: 0;
+                                    padding: 0;
+                                    box-sizing: border-box;
+                                    font-family: &amp;#39;Poppins&amp;#39;,sans-serif;
+                                    line-height: 1.5;
+                                }
+                                
+                                body{
+                                    width: auto;
+                                    height: 100vh;
+                                    background-color: #fdfdfd;
+                                    margin-inline: 30px;
+                                }
+                                
+                                .text-boxes{
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: center;
+                                    flex-wrap: wrap;
+                                }
+                                
+                                .text-box{
+                                    height: 400px;
+                                    width: 100%;
+                                    max-width: 660px;
+                                    margin: 60px 0;
+                                }
+                                
+                                .topic{
+                                    font-size: 1.3rem;
+                                    font-weight: 600;
+                                }
+                                
+                                textarea{
+                                    width: 100%;
+                                    height: 100%;
+                                    margin-block: .5rem;
+                                    padding: 1rem;
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    color: gray;
+                                    outline: none;
+                                    border: 2px solid #265df2;
+                                    border-radius: .5rem;
+                                    resize: none;
+                                }
+                                
+                                textarea::-webkit-scrollbar{
+                                    display: none;
+                                }
+                                
+                                button{
+                                    color: white;
+                                    background-color: #265df2;
+                                    padding: .8em 2rem;
+                                    outline: none;
+                                    border: none;
+                                    border-radius: .5rem;
+                                    font-size: 1rem;
+                                    cursor: pointer;
+                                }
+                                
+                                button:hover{
+                                    background-color: #0e4bf1;
+                                }
+                                
+                                @media (max-width:400px){
+                                    button{
+                                        width: 100%;
+                                    }
+                                }
+                            &lt;/textarea&gt;
+
+                            &lt;button id=&quot;CSSBtn&quot;&gt;Copy Codes&lt;/button&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- JavaScript Box --&gt;
+                        &lt;div class=&quot;text-box JSBox&quot;&gt;
+                            &lt;div class=&quot;topic&quot;&gt;JavaScript Code:&lt;/div&gt;
+
+                            &lt;textarea id=&quot;JSBox&quot; readonly&gt;
+                                &amp;lt;script&amp;gt;
+                                    let HTMLBox = document.getElementById(&amp;quot;HTMLBox&amp;quot;);
+                                    let HTMLBtn = document.getElementById(&amp;quot;HTMLBtn&amp;quot;);
+                                    HTMLBtn.onclick = function () {
+                                        HTMLBox.select();
+                                        document.execCommand(&amp;quot;copy&amp;quot;);
+                                        HTMLBtn.innerText = &amp;quot;Codes Copied&amp;quot;;
+                                    }
+
+                                    let CSSBox = document.getElementById(&amp;quot;CSSBox&amp;quot;);
+                                    let CSSBtn = document.getElementById(&amp;quot;CSSBtn&amp;quot;);
+                                    CSSBtn.onclick = function () {
+                                        CSSBox.select();
+                                        document.execCommand(&amp;quot;copy&amp;quot;);
+                                        CSSBtn.innerText = &amp;quot;Codes Copied&amp;quot;;
+                                    }
+
+                                    let JSBox = document.getElementById(&amp;quot;JSBox&amp;quot;);
+                                    let JSBtn = document.getElementById(&amp;quot;JSBtn&amp;quot;);
+                                    JSBtn.onclick = function () {
+                                        JSBox.select();
+                                        document.execCommand(&amp;quot;copy&amp;quot;);
+                                        JSBtn.innerText = &amp;quot;Codes Copied&amp;quot;;
+                                    }  
+
+                                &amp;lt;/script&amp;gt;
+                            &lt;/textarea&gt;
+
+                            &lt;button id=&quot;JSBtn&quot;&gt;Copy Codes&lt;/button&gt;
+                        &lt;/div&gt;
+
+                    &lt;/div&gt;
+
+                    &lt;script&gt;
+                        let HTMLBox = document.getElementById(&quot;HTMLBox&quot;);
+                        let HTMLBtn = document.getElementById(&quot;HTMLBtn&quot;);
+                        HTMLBtn.onclick = function () {
+                            HTMLBox.select();
+                            document.execCommand(&quot;copy&quot;);
+                            HTMLBtn.innerText = &quot;Codes Copied&quot;;
+                        }
+
+                        let CSSBox = document.getElementById(&quot;CSSBox&quot;);
+                        let CSSBtn = document.getElementById(&quot;CSSBtn&quot;);
+                        CSSBtn.onclick = function () {
+                            CSSBox.select();
+                            document.execCommand(&quot;copy&quot;);
+                            CSSBtn.innerText = &quot;Codes Copied&quot;;
+                        }
+
+                        let JSBox = document.getElementById(&quot;JSBox&quot;);
+                        let JSBtn = document.getElementById(&quot;JSBtn&quot;);
+                        JSBtn.onclick = function () {
+                            JSBox.select();
+                            document.execCommand(&quot;copy&quot;);
+                            JSBtn.innerText = &quot;Codes Copied&quot;;
+                        }
+
+                    &lt;/script&gt;
+                &lt;/body&gt;
+
+                &lt;/html&gt;
+            </textarea>
+
+            <button id="HTMLBtn">Copy Codes</button>
+        </div>
+
+        <!-- CSS Box -->
+        <div class="text-box CSSBox">
+            <div class="topic">CSS Code:</div>
+
+            <textarea id="CSSBox" readonly>
+                *{
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    font-family: &#39;Poppins&#39;,sans-serif;
+                    line-height: 1.5;
+                }
+                
+                body{
+                    width: auto;
+                    height: 100vh;
+                    background-color: #fdfdfd;
+                    margin-inline: 30px;
+                }
+                
+                .text-boxes{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                }
+                
+                .text-box{
+                    height: 400px;
+                    width: 100%;
+                    max-width: 660px;
+                    margin: 60px 0;
+                }
+                
+                .topic{
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                }
+                
+                textarea{
+                    width: 100%;
+                    height: 100%;
+                    margin-block: .5rem;
+                    padding: 1rem;
+                    font-size: 1rem;
+                    font-weight: 300;
+                    color: gray;
+                    outline: none;
+                    border: 2px solid #265df2;
+                    border-radius: .5rem;
+                    resize: none;
+                }
+                
+                textarea::-webkit-scrollbar{
+                    display: none;
+                }
+                
+                button{
+                    color: white;
+                    background-color: #265df2;
+                    padding: .8em 2rem;
+                    outline: none;
+                    border: none;
+                    border-radius: .5rem;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    margin-bottom: 30px;
+                }
+                
+                button:hover{
+                    background-color: #0e4bf1;
+                }
+                
+                @media (max-width:400px){
+                    button{
+                        width: 100%;
+                    }
+                }
+            </textarea>
+
+            <button id="CSSBtn">Copy Codes</button>
+        </div>
+
+        <!-- JavaScript Box -->
+        <div class="text-box JSBox">
+            <div class="topic">JavaScript Code:</div>
+
+            <textarea id="JSBox" readonly>
+                &lt;script&gt;
+                    let HTMLBox = document.getElementById(&quot;HTMLBox&quot;);
+                    let HTMLBtn = document.getElementById(&quot;HTMLBtn&quot;);
+                    HTMLBtn.onclick = function () {
+                        HTMLBox.select();
+                        document.execCommand(&quot;copy&quot;);
+                        HTMLBtn.innerText = &quot;Codes Copied&quot;;
+                    }
+
+                    let CSSBox = document.getElementById(&quot;CSSBox&quot;);
+                    let CSSBtn = document.getElementById(&quot;CSSBtn&quot;);
+                    CSSBtn.onclick = function () {
+                        CSSBox.select();
+                        document.execCommand(&quot;copy&quot;);
+                        CSSBtn.innerText = &quot;Codes Copied&quot;;
+                    }
+
+                    let JSBox = document.getElementById(&quot;JSBox&quot;);
+                    let JSBtn = document.getElementById(&quot;JSBtn&quot;);
+                    JSBtn.onclick = function () {
+                        JSBox.select();
+                        document.execCommand(&quot;copy&quot;);
+                        JSBtn.innerText = &quot;Codes Copied&quot;;
+                    }  
+
+                &lt;/script&gt;
+            </textarea>
+
+            <button id="JSBtn">Copy Codes</button>
+        </div>
+
+    </div>
+
+    <script>
+        let HTMLBox = document.getElementById("HTMLBox");
+        let HTMLBtn = document.getElementById("HTMLBtn");
+        HTMLBtn.onclick = function () {
+            HTMLBox.select();
+            document.execCommand("copy");
+            HTMLBtn.innerText = "Codes Copied";
+        }
+
+        let CSSBox = document.getElementById("CSSBox");
+        let CSSBtn = document.getElementById("CSSBtn");
+        CSSBtn.onclick = function () {
+            CSSBox.select();
+            document.execCommand("copy");
+            CSSBtn.innerText = "Codes Copied";
+        }
+
+        let JSBox = document.getElementById("JSBox");
+        let JSBtn = document.getElementById("JSBtn");
+        JSBtn.onclick = function () {
+            JSBox.select();
+            document.execCommand("copy");
+            JSBtn.innerText = "Codes Copied";
+        }
+
+    </script>
+</body>
+
+</html>
